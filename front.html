@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" , href="style.css">
+    <script src="java.js">
+    </script>
+    <title>Document</title>
+</head>
+<style>
+    .container1 {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        margin-right: 50px;
+    }
+    
+    header {
+        background-color: rgb(212, 21, 21);
+    }
+    
+    .h1 {
+        float: left;
+        position: relative;
+    }
+    
+    .logo {
+        float: left;
+        width: 5%;
+        height: 3%;
+    }
+    
+    header::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+    
+    nav {
+        float: right;
+    }
+    
+    nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    nav li {
+        display: inline-block;
+        margin-left: 150px;
+        padding-top: 23px;
+        padding-right: 23px;
+    }
+    
+    nav a {
+        color: rgb(22, 23, 85);
+        font-family: Arial, Helvetica, fantasy;
+        text-decoration: green;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+    
+    nav a:hover {
+        color: red;
+    }
+    
+    #mydiv {
+        visibility: hidden;
+        position: center;
+    }
+    
+    body {
+        background-image: url("https://wallpaperaccess.com/full/1486722.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+    }
+    
+    h3 {
+        text-align: center;
+        font-family: Arial, Helvetica, fantasy;
+        text-transform: uppercase;
+        font-size: 25px;
+        color: white;
+    }
+    
+    h4 {
+        text-align: center;
+        font-family: Arial, Helvetica, fantasy;
+        text-transform: uppercase;
+        font-size: 25px;
+        color: red;
+    }
+    
+    h5 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-size: 160px;
+        font-family: 'Black Ops One', cursive;
+        line-height: 120px;
+        text-align: center;
+        text-shadow: 5px 5px #000000;
+        color: #ffffff;
+    }
+    
+    button {
+        width: 10%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        display: inline-block;
+    }
+    
+    button:hover {
+        background-color: red;
+    }
+    
+    input[type="text"] {
+        margin-left: 100px;
+    }
+    
+    .button1 {
+        width: 20%;
+        background-color: red;
+        color: white;
+        padding: 14px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        display: inline-block;
+    }
+    
+    .button1:hover {
+        background-color: red;
+    }
+    
+    .txthint1 {
+        padding-top: 200px;
+        color: white;
+    }
+    
+    #txthint {
+        visibility: visible;
+        position: center;
+        color: red;
+        text-align: center;
+        font-family: Arial, Helvetica, fantasy;
+        text-transform: uppercase;
+        font-size: 25px;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="container1">
+
+            <img src="wp3845907.jpg" alt=logo class="logo">
+            <nav>
+                <ul>
+                    <li><a href="front.html">Home</a></li>
+                    <li><a href="leaderboard.html">Leaderboard</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="help.html">Help</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+    <marquee behavior="scroll" loop="-1" width="30%">
+        <i><strong><span id="time"></span></strong></i>
+    </marquee>
+    <h3> Please Arrange your boat on this grid</h3>
+
+    <div class="container">
+
+        <div class="letters">
+            <ul style="list-style-type:none">
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+                <li>D</li>
+                <li>E</li>
+                <li>F</li>
+                <li>G</li>
+                <li>H</li>
+                <li>I</li>
+                <li>J</li>
+            </ul>
+
+
+        </div>
+
+        <div class="grid grid-user"></div>
+        <div class="grid-display">
+            <div class="ship destroyer" draggable="true">
+                <div id="destroyer0"></div>
+                <div id="destroyer1"></div>
+            </div>
+            <br>
+            <div class="ship submarine" draggable="true">
+                <div id="submarine0"></div>
+                <div id="submarine1"></div>
+                <div id="submarine2"></div>
+            </div>
+            <br>
+            <div class="ship cruiser" draggable="true">
+                <div id="cruiser0"></div>
+                <div id="cruiser1"></div>
+                <div id="cruiser2"></div>
+            </div>
+            <br>
+            <div class="ship battleship" draggable="true">
+                <div id="battleship0"></div>
+                <div id="battleship1"></div>
+                <div id="battleship2"></div>
+                <div id="battleship3"></div>
+            </div>
+            <br>
+            <div class="ship carrier" draggable="true">
+                <div id="carrier0"></div>
+                <div id="carrier1"></div>
+                <div id="carrier2"></div>
+                <div id="carrier3"></div>
+                <div id="carrier4"></div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="info">
+        <button id="rotate">Rotate the ships</button>
+        <button id="start" onclick="demoDisplay()">Start Game</button>
+    </div>
+
+
+    <div id="mydiv">
+        <span id="txthint"> </span>
+        <label for="firecell"><h3>Fire the enemy</h3></label>
+        <input type="text" id="firecell" placeholder="0-99" name="firecell" required "">
+        <button id="button1" class="button1" type="submit" name="Fire" onclick="attack()">FIRE</button>
+        <span id="txthint1" class="txthint1"> </span>
+    </div>
+</body>
+
+</html>
+
+<script>
+    var dt = new Date();
+    document.getElementById('time').innerHTML = dt;
+
+    function demoDisplay() {
+        document.getElementById("mydiv").style.visibility = "visible";
+    }
+
+    function demoDisplay1() {
+
+    }
+
+    function attack() {
+
+        document.getElementById("button1").disabled = true;
+        setTimeout(function() {
+            document.getElementById("button1").disabled = false;
+            document.getElementById("txthint").style.visibility = "visible";
+            document.getElementById("txthint").innerHTML = "YOUR TURN AGAIN";
+            setTimeout(function() {
+                document.getElementById("txthint").style.visibility = "hidden";
+            }, 1000);
+        }, 5000);
+
+        var n = document.getElementById("firecell").value;
+        console.log(n)
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    document.getElementById("txthint1").innerHTML = this.responseText;
+                }
+            }
+        };
+        xhr.open("GET", "attack.php?obj=" + n, true);
+        xhr.send();
+    }
+</script>

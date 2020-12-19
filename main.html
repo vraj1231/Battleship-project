@@ -1,0 +1,234 @@
+<html>
+
+<head>
+    <style>
+        body,
+        html {
+            height: 100%;
+            background-image: url("https://campusnews.fresnostate.edu/content/issues/20200420-april-20-2020/11-zoom-backgrounds-available/bg-footballstadiumzoomcn.jpg");
+        }
+        
+        .bg-image {
+            /* The image used */
+            background-image: url("https://i.pinimg.com/originals/9f/f7/d1/9ff7d1a690e7bf508eda106f9bc13dab.jpg");
+            /* Add the blur effect */
+            filter: blur(2px);
+            -webkit-filter: blur(2px);
+            /* Full height */
+            height: 100%;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .bg-text {
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/opacity/see-through */
+            color: white;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: auto;
+            width: 30%;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .button {
+            margin: 0;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        
+        .bg-title {
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/opacity/see-through */
+            color: white;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            top: 10%;
+            left: 83%;
+            transform: translate(-50%, -50%);
+            z-index: auto;
+            width: 30%;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .p1 {
+            font-family: "Lucida Console", "Courier New", monospace;
+            font-size: 150%;
+        }
+        
+        .p2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 150%;
+        }
+        /* Change body */
+        
+        input {
+            width: 100%;
+            margin-bottom: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            border: none;
+            outline: none;
+            padding: 5px;
+            font-size: 13px;
+            color: #fff;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+            box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.2), 0 1px 1px rgba(255, 255, 255, 0.2);
+            -webkit-transition: box-shadow .5s ease;
+            -moz-transition: box-shadow .5s ease;
+            -o-transition: box-shadow .5s ease;
+            -ms-transition: box-shadow .5s ease;
+            transition: box-shadow .5s ease;
+        }
+        
+        button {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        /* change tab links */
+        
+        .tab-link {
+            background-color: darkslategrey;
+            font-family: "Lucida Console", "Courier New", monospace;
+            color: white;
+            float: center;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 17px;
+            width: 25%;
+        }
+        
+        .tab-link:hover {
+            background-color: slategrey;
+        }
+        /* change tab content */
+        
+        .tab-content {
+            color: white;
+            display: none;
+            padding: 30px 10px;
+            height: 75%;
+        }
+        
+        #Login {
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        
+        #SignUp {
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        
+        .cancelbtn {
+            background-color: red;
+        }
+        
+        .cancelbtn:hover {
+            background-color: red;
+        }
+    </style>
+    <script>
+        function openPage(pageName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+        }
+
+        // always open with default
+        document.getElementById("default").click();
+    </script>
+</head>
+
+<body>
+    <div class="bg-text">
+        <p class="p1">Welcome to Battleship game</p>
+        <P>To keep Connected with us please login with your personal info</P>
+        <button class="tab-link" onclick="openPage('Login', this, 'deepskyblue')" id="default">Login</button>
+        <button class="tab-link" onclick="openPage('SignUp', this, 'mediumseagreen')">Sign Up</button>
+
+
+        <div id="Login" class="tab-content">
+            <form method="GET" action="login.php">
+
+                <label for="email"><b>Username</b></label>
+                <input type="text" placeholder="Enter your full Email*" name="mail" required "">
+
+                <label for="pswd"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password*" name="pass" required "">
+
+
+                <a id="forgot-password" href="#" style="color:red">Forgot password?</a>
+
+                <div class="clearfix">
+                    <button type="submit" name="login">Sign In</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="SignUp" class="tab-content">
+            <h1>Create an account.</h1>
+            <form action="signup.php" method="GET">
+
+                <label for="firstname"><b>First Name</b></label>
+                <input type="text" placeholder="First Name*" name="firstname" required "">
+
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email*" name="mail" required "">
+
+
+                <label for="pswd"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password*" name="pass" required "">
+
+                <p>By creating an account you agree to our <a href="#" style="color:red">Terms & Privacy</a>.</p>
+
+
+                <div class="clearfix">
+                    <button type="button" class="cancelbtn">Cancel</button>
+                    <button type="submit" name="signupbtn" class="signupbtn">Create Account</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

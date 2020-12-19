@@ -1,0 +1,146 @@
+    .container {
+        display: flex;
+    }
+    
+    .letters {
+        line-height: 2.7;
+        color: white;
+        margin-left: 100px;
+    }
+    
+    .grid-user {
+        width: 420px;
+        height: 420px;
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: rgb(136, 196, 171);
+        background-image: url("https://brand.fresnostate.edu/assets/img/DOG-red-blue.jpg");
+        background-size: cover;
+        border: 5px solid black;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    
+    .grid div {
+        width: 40px;
+        height: 40px;
+        border: 1px solid black;
+    }
+    /* .grid-refer {
+        width: 420px;
+        height: 420px;
+        display: flex;
+        flex-wrap: wrap;
+        border: 5px solid black;
+        padding: 0px;
+        margin-left: 10px;
+    } */
+    
+    .grid-display {
+        width: 400px;
+        height: 400px;
+        background-color: rgb(63, 146, 121);
+        border: 5px solid black;
+        background-image: url("https://www.teahub.io/photos/full/323-3238717_battleship-backgrounds.jpg");
+        background-size: cover;
+        margin-left: 300px;
+        margin-right: 10px;
+        margin-top: 20px;
+    }
+    
+    .destroyer {
+        width: 80px;
+        height: 40px;
+        background-color: rgb(2, 183, 255);
+        border: 1px solid black;
+        display: flex;
+    }
+    
+    .destroyer-vertical {
+        width: 40px;
+        height: 80px;
+        background-color: rgb(2, 183, 255);
+        border: 1px solid black;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .info {
+        position: center;
+        display: inline;
+        margin-left: 250px;
+    }
+    
+    .ship div {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .submarine {
+        width: 120px;
+        height: 40px;
+        background-color: rgb(255, 168, 53);
+        border: 1px solid black;
+        display: flex;
+    }
+    
+    .submarine-vertical {
+        width: 40px;
+        height: 120px;
+        background-color: rgb(255, 168, 53);
+        border: 1px solid black;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .cruiser {
+        width: 120px;
+        height: 40px;
+        background-color: rgb(136, 255, 136);
+        border: 1px solid black;
+        display: flex;
+    }
+    
+    .cruiser-vertical {
+        width: 40px;
+        height: 120px;
+        background-color: rgb(136, 255, 136);
+        border: 1px solid black;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .battleship {
+        width: 160px;
+        height: 40px;
+        background-color: rgb(197, 14, 197);
+        border: 1px solid black;
+        display: flex;
+    }
+    
+    .battleship-vertical {
+        width: 40px;
+        height: 160px;
+        background-color: rgb(197, 14, 197);
+        border: 1px solid black;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .carrier {
+        width: 200px;
+        height: 40px;
+        background-color: yellow;
+        border: 1px solid black;
+        display: flex;
+    }
+    
+    .carrier-vertical {
+        width: 40px;
+        height: 200px;
+        background-color: yellow;
+        border: 1px solid black;
+        display: flex;
+        flex-wrap: wrap;
+    }
